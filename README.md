@@ -6,7 +6,7 @@
 
 ## About This Guide
 
-This guide is structured as a **multi-session workshop** designed for students getting started with ROS 2 and Micro-ROS. Each session builds on the previous one — go through them in order
+This guide is structured as a **multi-session workshop** designed for students getting started with ROS 2 and Micro-ROS. Each session builds on the previous one go through them in order
 ---
 
 # Environment Setup
