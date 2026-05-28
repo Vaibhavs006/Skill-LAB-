@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 echo "Please complete the manual WSL2 and Ubuntu 22.04 setup first. Press enter to continue."
 read
