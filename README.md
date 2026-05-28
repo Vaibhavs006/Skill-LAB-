@@ -19,8 +19,14 @@ Before you begin, make sure you have:
 - At least **4 GB RAM** and **15 GB free disk space**
 - A stable internet connection
 - **Windows Terminal** — install it from the [Microsoft Store](https://aka.ms/terminal) *(highly recommended)*
--  VS code 
+- **Visual Studio Code:** A powerful and lightweight code editor. You can download it from [the official website](httpss://code.visualstudio.com/).
+2.  **WSL (Windows Subsystem for Linux) Extension for VS Code:** This extension lets you use VS Code in WSL.
+    *   Open VS Code.
+    *   Go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window or press `Ctrl+Shift+X`.
+    *   Search for `WSL`.
+    *   Install the extension published by Microsoft.
 ---
+
 
 ## Step 0 — Install WSL2 & Ubuntu 22.04
 
