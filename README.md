@@ -75,62 +75,19 @@ export LANG=en_US.UTF-8
 
 ---
 
-## Step 2 — Add the ROS 2 Repository
+## Step 2 — Run the setup.sh 
 
-Install required tools:
-
+Download the repository:
 ```bash
-sudo apt install -y software-properties-common curl gnupg lsb-release
+git clone https://github.com/Vaibhavsgit clone https://github.com/Vaibhavs
 ```
-
-Add the ROS 2 GPG key:
-
+Navigate into the repository directory:
 ```bash
-sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key \
-  -o /usr/share/keyrings/ros-archive-keyring.gpg
+cd Skill-LAB
 ```
-
-Add the ROS 2 apt repository:
-
+Run the script:
 ```bash
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] \
-http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | \
-sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
-```
-
----
-
-## Step 3 — Install ROS 2 Humble
-
-Update apt and install:
-
-```bash
-sudo apt update && sudo apt upgrade -y
-```
-
-Install the full desktop version (includes RViz, demos, and CLI tools):
-
-```bash
-sudo apt install -y ros-humble-desktop
-```
-
->  This takes a few minutes depending on your internet speed. Grab a coffee ☕
-
-Also install the ROS 2 development tools:
-
-```bash
-sudo apt install -y ros-dev-tools
-```
-
----
-
-## Step 4 — Configure Your Environment
-
-Add ROS 2 to your shell so it auto-sources on every terminal launch:
-
-```bash
-echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
-source ~/.bashrc
+bash Setup.sh
 ```
 
 ### Verify Installation
@@ -163,75 +120,11 @@ You should see the talker publishing `Hello World: X` and the listener receiving
 
 ---
 
-
-
-## Step 5 — Install Micro-ROS
-
-> **Open a fresh terminal** for this section. Do **not** reuse a terminal from a previous step.
-
-### Source ROS 2
-
-```bash
-source /opt/ros/humble/setup.bash
-```
-
-### Create the Micro-ROS Workspace
-
-```bash
-mkdir microros_ws
-cd microros_ws
-```
-
->  **Stay inside `microros_ws`** for all commands in this section until told otherwise.
-
-### Clone the Micro-ROS Setup Repo
-
-```bash
-git clone -b humble https://github.com/micro-ROS/micro_ros_setup.git src/micro_ros_setup
-```
-
-### Update Dependencies
-
-```bash
-sudo apt update && rosdep update
-rosdep install --from-paths src --ignore-src -y
-```
-
 ### Install pip
 
 ```bash
 sudo apt-get install python3-pip
 ```
-
-### Build Micro-ROS Tools
-
-```bash
-colcon build
-source install/local_setup.bash
-```
-
-### Create the Firmware Workspace
-
-```bash
-ros2 run micro_ros_setup create_firmware_ws.sh host
-```
-
-### Download Micro-ROS Agent Packages
-
-```bash
-ros2 run micro_ros_setup create_agent_ws.sh
-```
-
-### Build the Agent
-
-```bash
-ros2 run micro_ros_setup build_agent.sh
-source install/local_setup.bash
-```
-
->  **Note:** Build warnings during these steps are normal — ignore them.
-
----
 
 # ROS 2 Jazzy on macOS (Apple Silicon) Using Docker
 
