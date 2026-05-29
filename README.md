@@ -135,6 +135,7 @@ sudo apt-get install python3-pip
 # ROS 2 Jazzy on macOS (Apple Silicon) Using Docker
 
 This guide explains how to install and run ROS 2 Jazzy on macOS (Apple Silicon/M-series Macs) using Docker. It also covers GUI applications such as Turtlesim using XQuartz.
+https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://foxglove.dev/blog/installing-ros2-on-macos-with-docker.html&ved=2ahUKEwiE0_zUn7aUAxXia2wGHQSjCrwQFnoECBsQAQ&usg=AOvVaw2MorJJ9CHrLlrYUT_6Kkz2
 
 ---
 
